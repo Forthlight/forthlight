@@ -14,3 +14,9 @@ vagrant reload (--provison)<br>
 vagrant halt / destroy<br>
 </p>
 Default synced folder is /vagrant on local server<br>
+
+
+<h2>Design Documents</h2>
+<p>Coding Conventions: <a href="">link</a></p>
+
+<h2>Resources</h2>
