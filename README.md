@@ -20,3 +20,4 @@ Default synced folder is /vagrant on local server<br>
 <p>Coding Conventions: <a href="">link</a></p>
 
 <h2>Resources</h2>
+<a href="rubyonrails.org">rails</a>
