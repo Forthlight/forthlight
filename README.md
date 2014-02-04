@@ -2,8 +2,8 @@ Forthlight - Dev branch
 ==========
 
 <h2>Vagrant installation instuctions</h2>
-<p>install Virtualbox from <a href="https://www.virtualbox.org/‎"></a><br>
-install vagrant from <a href="http://vagrantup.com"></a><br>
+<p>install Virtualbox from <a href="https://www.virtualbox.org/‎">link</a><br>
+install vagrant from <a href="http://vagrantup.com">link</a><br>
 run vagrant init precise32 http://files.vagrantup.com/precise32.box<br>
 cd into the project folder and run "vagrant up</p><br>
 
