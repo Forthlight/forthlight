@@ -2,7 +2,7 @@
 sudo apt-get install -y curl
 \curl -L https://get.rvm.io | bash
 source /etc/profile
-rvm install ruby -v 2.1.0-p0
+rvm install 2.1.0-p0
 
 sudo apt-get install -y git
 
@@ -25,5 +25,5 @@ sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y apache2-threaded-dev
 sudo apt-get install -y libapr1-dev
 sudo apt-get install -y libaprutil1-dev
-gem install rails -v 4.0.3
+gem install rails -v 4.0.3 --no-rdoc --no-ri
 
