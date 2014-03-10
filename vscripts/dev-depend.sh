@@ -15,9 +15,15 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 sudo apt-get update -y
 sudo apt-get install -y mongodb-10gen
 
+#postgresql
+sudo apt-get install postgresql postgresql-contrib -y
+
+
+#rails
 sudo apt-get update -y
 sudo apt-get install -y libcurl4-openssl-dev
 sudo apt-get install -y apache2-threaded-dev
 sudo apt-get install -y libapr1-dev
 sudo apt-get install -y libaprutil1-dev
 gem install rails -v 4.0.3
+
