@@ -5,7 +5,7 @@ Forthlight - Dev branch
 <p>install Virtualbox from <a href="https://www.virtualbox.org/‎">link</a><br>
 install vagrant from <a href="http://vagrantup.com">link</a><br>
 run: vagrant box add precise32 http://files.vagrantup.com/precise32.box<br>
-git clone [this url]<br>
+git clone https://github.com/Forthlight/Forthlight-core.git<br>
 cd into the project folder and run "vagrant up</p><br>
 
 <h2>Useful Vagrant commands</h2>
