@@ -17,7 +17,7 @@ Default synced folder is /vagrant on local server<br>
 
 
 <h2>Design Documents</h2>
-<p>Coding Conventions: <a href="">link</a></p>
+<p>Coding Conventions: <a href="https://github.com/Forthlight/Forthlight-core/wiki/Code-Conventions-%5BSwedish%5D">link</a></p>
 
 <h2>Resources</h2>
 <a href="rubyonrails.org">rails</a>
