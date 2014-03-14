@@ -29,10 +29,12 @@ group :assets do
   gem 'sass-rails', '~> 4.0.0'
 end
 
+#Gems used only in development environment
 group :development do
 
 end
 
+#Gems used only in development and test environment
 group :development, :test do
   gem "minitest", "~> 4.7.5"
   gem 'rspec-rails', '~> 2.14.1'
