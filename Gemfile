@@ -4,11 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use postgres as the database for Active Record
-gem 'pg', "~> 0.17.1"
+gem 'pg', "0.17.1"
 
 # Use mongoid as database adapter for mongodb
-gem 'mongoid', '~> 4.0.0.beta1'
-gem 'bson_ext'
+gem 'mongoid', '4.0.0.beta1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -17,16 +16,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jquery-rails', "3.1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails', '4.0.0'
 end
 
 #Gems used only in development environment
@@ -36,10 +32,10 @@ end
 
 #Gems used only in development and test environment
 group :development, :test do
-  gem "minitest", "~> 4.7.5"
-  gem 'rspec-rails', '~> 2.14.1'
-  gem 'fabrication', '~> 2.9.6'
-  gem "database_cleaner", "~> 0.8.0"
+  gem "minitest", "4.7.5"
+  gem 'rspec-rails', '2.14.1'
+  gem 'fabrication', '2.9.6'
+  gem "database_cleaner", "0.8.0"
   gem "spork-rails", '~> 4.0.0'
 end
 
