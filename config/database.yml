@@ -1,17 +1,17 @@
 development:
   adapter: postgresql
-  database: <%= ENV['POSTGRES_DATABASE'] %>
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  database: 'forthlight_dev'
+  username: 'lightbringer'
+  password: 'local_dev'
   host: localhost
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
-  database: <%= ENV['POSTGRES_DATABASE'] %>
-  username: <%= ENV['POSTGRES_USERNAME'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  database: 'forthlight_dev'
+  username: 'lightbringer'
+  password: 'local_dev'
   host: localhost
   pool: 5
   timeout: 5000

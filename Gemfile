@@ -35,7 +35,7 @@ group :development, :test do
   gem "minitest", "4.7.5"
   gem 'rspec-rails', '2.14.1'
   gem 'fabrication', '2.9.6'
-  gem "database_cleaner", "0.8.0"
+  gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
 end
 
