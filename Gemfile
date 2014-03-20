@@ -11,12 +11,13 @@ gem 'mongoid', '4.0.0.beta1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
+gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', "3.1.0"
+gem 'json', :git => "git://github.com/flori/json.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,7 +38,7 @@ group :development, :test do
   gem 'article', path: "/vagrant/article"
   gem 'common_domain', path: "/vagrant/common_domain"
 
-  gem "minitest", "4.7.5"
+  gem "minitest", "4.7.5", :git => 'git://github.com/seattlerb/minitest.git'
   gem 'rspec-rails', '2.14.1'
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
