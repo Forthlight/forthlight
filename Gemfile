@@ -32,6 +32,11 @@ end
 
 #Gems used only in development and test environment
 group :development, :test do
+  gem 'member', path: "/vagrant/member"
+  gem 'administration', path: "/vagrant/administration"
+  gem 'article', path: "/vagrant/article"
+  gem 'common_domain', path: "/vagrant/common_domain"
+
   gem "minitest", "4.7.5"
   gem 'rspec-rails', '2.14.1'
   gem 'fabrication', '2.9.6'
