@@ -21,6 +21,7 @@ PATH
   remote: /vagrant/administration
   specs:
     administration (0.0.1)
+      devise (= 3.2.4)
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
