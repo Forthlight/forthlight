@@ -1,2 +1,113 @@
-<h1>Launcher#index</h1>
-<p>Find me in app/views/launcher/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forthlight</title>
+	<%= stylesheet_link_tag "application", media: "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="navigation-wrapper">
+		<div class="row-fluid main-bar">
+			<div class="span12">
+			<div class="proud-sideslide">
+				<input type="checkbox" name="trigger" id="trigger">
+				<label for="trigger">FORTHLIGHT</label>
+				<div class="bar-container preloaded">
+					<nav>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Articles</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Search</a></li>
+							<li></li>
+							<li><a href="#">Sign up</a></li>
+							<li><a href="#">Sign in</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+				<div class="sneaky-sideslide">
+					<input type="checkbox" name="trigger2" id="trigger2">
+					<label for="trigger2">FORTHLIGHT</label>
+					<div class="bar-container preloaded">
+						<nav>
+							<ul>
+								<li><a href="#">Banana</a></li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid showcase">
+		<div class="span12">
+			<div class="span3"></div>
+			<div class="span6">
+			<h2 class="logo">FORTHLIGHT</h2>
+			<p>This is a long and explanatory slogan that explains what we do around these parts.</p>
+			</div>
+			<div class="span3"></div>
+		</div>
+	</div>
+
+
+	<div class="row-fluid sub-bar intrests-bar">
+		<div class="span4">
+			<h2>Read</h2>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		</div>
+		<div class="span4">
+			<h2>Join</h2>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		</div>
+		<div class="span4">
+			<h2>Share</h2>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		</div>
+	</div>
+
+	<div class="row-fluid sub-bar wiz">
+		<div class="span12">
+			<h2>Let our wizard guide you</h2>
+			<p>The site is a dangerous place, better follow the wizard.</p>
+			<div class="mock-btn"><b>Conjure</b></div>
+		</div>
+	</div>
+
+	<div class="row-fluid sub-bar featured-bar">
+		<div class="span4">
+			<h1>Feature article from a Farmer</h1>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<a href="#">Read full article...</a>
+		</div>
+		<div class="span4">
+			<h1>Feature article from a Scientist</h1>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<a href="#">Read full article...</a>
+		</div>
+		<div class="span4">
+			<h1>Feature article from a Businessman</h1>
+			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<a href="#">Read full article...</a>
+		</div>
+	</div>
+
+	<div class="row-fluid sub-bar presentation">
+		<div class="span12">
+			<div class="span2"></div>
+			<div class="span8">
+				<h2>Step into the Forthlight</h2>
+				<p>Register to pool your findings, products and experiences with ours. Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem.</p>
+			</div>
+			<div class="span2"></div>
+		</div>
+	</div>
+
+	<%= yield %>
+</body>
+</html>
