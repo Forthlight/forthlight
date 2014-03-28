@@ -1,4 +1,48 @@
 /*
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
-*/
+  */
+
+.logo {
+  color:#fff;
+}
+
+/*launcher bar types*/
+.showcase {
+  padding-top:10%;
+  height:250px;
+  background: #da5838;
+  color:#fff;
+}
+
+.sub-bar {	
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+.featured-bar {
+  text-align: left;
+}
+
+.wiz {
+  background: #da5838;
+  color:#fff;
+}
+
+.presentation {
+  background: #333;
+  color:#fff;
+}
+
+/*end launcher bar types*/
+
+.mock-btn {
+  background: #3cb4d9;
+  color:#fff;
+  cursor: pointer;
+  text-align: center;
+  width:75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
