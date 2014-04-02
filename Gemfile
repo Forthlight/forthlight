@@ -18,6 +18,9 @@ gem 'therubyracer', platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails', "3.1.0"
 
+#if you find this, remove it
+gem 'rubocop', require: false
+
 # Added to solve installation issues
 gem 'json', :git => "git://github.com/flori/json.git"
 gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
