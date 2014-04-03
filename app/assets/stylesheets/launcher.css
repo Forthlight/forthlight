@@ -3,6 +3,10 @@
   They will automatically be included in application.css.
   */
 
+.center-stage{
+  text-align: center;
+}
+
 .logo {
   color:#fff;
 }
@@ -10,18 +14,20 @@
 /*launcher bar types*/
 .showcase {
   padding-top:10%;
-  height:250px;
+  height:350px;
   background: #da5838;
   color:#fff;
 }
 
 .sub-bar {	
+  padding-left, padding-right:10px; 
   padding-top:5%;
   padding-bottom:5%;
 }
 
 .featured-bar {
   text-align: left;
+  padding-left: 10px;
 }
 
 .wiz {
