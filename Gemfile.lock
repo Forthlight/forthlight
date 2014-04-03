@@ -21,7 +21,6 @@ PATH
   remote: /vagrant/administration
   specs:
     administration (0.0.1)
-      devise (= 3.2.4)
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
@@ -36,6 +35,14 @@ PATH
       tinymce-rails
 
 PATH
+  remote: /vagrant/auth
+  specs:
+    auth (0.0.1)
+      devise (= 3.2.4)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+
+PATH
   remote: /vagrant/common_domain
   specs:
     common_domain (0.0.1)
@@ -47,7 +54,6 @@ PATH
   remote: /vagrant/member
   specs:
     member (0.0.1)
-      devise (= 3.2.4)
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
@@ -200,6 +206,7 @@ PLATFORMS
 DEPENDENCIES
   administration!
   article!
+  auth!
   common_domain!
   database_cleaner (= 1.2.0)
   fabrication (= 2.9.6)

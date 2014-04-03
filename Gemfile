@@ -36,6 +36,7 @@ end
 
 #Gems used only in development and test environment
 group :development, :test do
+  gem 'auth', path: "/vagrant/auth"
   gem 'member', path: "/vagrant/member"
   gem 'administration', path: "/vagrant/administration"
   gem 'article', path: "/vagrant/article"
