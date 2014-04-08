@@ -50,6 +50,8 @@ group :development, :test do
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
+  #sexy deployment
+  gem 'capistrano'
 end
 
 # Use ActiveModel has_secure_password

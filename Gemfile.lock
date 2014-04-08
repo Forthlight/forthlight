@@ -58,6 +58,7 @@ PATH
       pg (= 0.17.1)
       rails (= 4.0.3)
       simple_roles (= 0.0.12)
+      tinymce-rails
 
 GEM
   remote: https://rubygems.org/
@@ -92,6 +93,10 @@ GEM
     bcrypt (3.1.7)
     bson (2.2.1)
     builder (3.1.4)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
     connection_pool (1.2.0)
     database_cleaner (1.2.0)
     devise (3.2.4)
@@ -124,6 +129,9 @@ GEM
       connection_pool (~> 1.2)
       optionable (~> 0.2.0)
     multi_json (1.9.0)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
     optionable (0.2.0)
     origin (2.1.0)
     orm_adapter (0.5.0)
@@ -197,11 +205,18 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
     tilt (1.4.1)
+    tins (1.1.0)
     tinymce-rails (4.0.19)
       railties (>= 3.1.1)
     treetop (1.4.15)
@@ -221,6 +236,7 @@ DEPENDENCIES
   administration!
   article!
   auth!
+  capistrano
   common_domain!
   database_cleaner (= 1.2.0)
   fabrication (= 2.9.6)
