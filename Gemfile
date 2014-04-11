@@ -60,6 +60,14 @@ group :development, :test do
 
 end
 
+
+ group :production do
+  gem 'auth', path: "../auth"
+  gem 'member', path: "../member"
+  gem 'administration', path: "../administration"
+  gem 'article', path: "../article"
+  gem 'common_domain', path: "../common_domain"
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
