@@ -52,6 +52,12 @@ group :development, :test do
   gem "spork-rails", '~> 4.0.0'
   #sexy deployment
   gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'rvm1-capistrano3', :require => false
+  #gem 'capistrano-rvm'
+
+
 end
 
 # Use ActiveModel has_secure_password
