@@ -1,83 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Forthlight</title>
-	<%= stylesheet_link_tag "application", media: "all" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<div class="navigation-wrapper">
-		<div class="row-fluid main-bar">
-			<div class="span12">
-			<div class="proud-sideslide slide-label">
-				<input type="checkbox" name="trigger" class="stopscroll" id="trigger" >
-				<label for="trigger">Proud</label>
-				<div class="proud-bar-container preloaded">
-					<nav>
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Articles</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Search</a></li>
-							<li></li>
-							<li></li>
-							<li><a href="#">Account</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-
-			<div class="nav-head-title"><%= link_to "FORTHLIGHT", root_path %></div>
-
-			<div class="sneaky-sideslide slide-label">
-					<input type="checkbox" name="trigger2" class="stopscroll" id="trigger2">
-					<label for="trigger2">Sneaky</label>
-					<div class="sneaky-bar-container preloaded">
-						<nav>
-							<ul>
-								<li><a href="#">Banana</a></li>
-
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="center-stage">
+<div class="center-stage">
 	<div class="row-fluid showcase">
 		<div class="span12">
-			<div class="span3"></div>
-			<div class="span3">
-			<h2 class="logo">FORTHLIGHT</h2>
-			<p>This is a long and explanatory slogan that explains what we do around these parts.</p>
+			<h2 class="logo">Forthlight</h2>
+		</div>
+		<div class="span12">
+			<div class="span2"></div>
+			<div class="span4">
+				<p>
+					This is a long and explanatory slogan that explains what we do around these parts.
+				</p>
 			</div>
-			<div class="span3 account-box">
-				<p>Sign up to spread the warmth of knowledge.</p>
-				<h2>Sign in</h2>
-				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-				  <div><%= f.label :login %><br />
-				  <%= f.text_field :login, autofocus: true %></div>
+			<div class="span4 account-box">		
+				<div class="span2"></div>
+				<div class="span8">
+					<% if user_signed_in? %>
+					<p>
+						Hello <%= current_user.first_name %>, did you know that as a aproved member you can write articles for the whole world to see? Pretty cool, huh?<br>
+						Check it out.
+					</p>
+					<div class="mock-btn"><%= link_to "Write Article", root_path %></div>
+					<% else  %>
+					<h2>Sign in</h2>
+					<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+					<div>
+						<%= f.label :login %><br />
+						<%= f.text_field :login, autofocus: true, :class=>"fluid-field" %>
+					</div>
 
-				  <div><%= f.label :password %><br />
-				    <%= f.password_field :password, autocomplete: "off" %></div>
+					<div>
+						<%= f.label :password %><br />
+						<%= f.password_field :password, autocomplete: "off", :class=>"fluid-field" %>
+					</div>
 
-				  <% if devise_mapping.rememberable? -%>
-				    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-				  <% end -%>
+					<div style="login-actions">
 
-				  <div><%= f.submit "Sign in" %></div>
-				<% end %>
+				<div class="row-fluid">
+					<%= f.submit "Sign in", :class=>"mock-btn" %>
+					or
+					<%= link_to "Register", new_registration_path(resource_name), :class=>"mock-btn", :style=>" padding: 0 0;" %>
+				</div>
+					  <br />
 
-				<%= render "users/shared/links" %>
-			</div>
-			<div class="span3"></div>
+
+						<% if devise_mapping.rememberable? -%>
+						<div>
+							<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+						</div>
+						<% end -%>
+					</div>
+					
+
+					<%= render "users/shared/links" %>
+					<% end %>		
+					<% end %>
+				</div>
+				<div class="span2"></div>
+			</div>	
+			<div class="span2"></div>				
 		</div>
 	</div>
+
 
 
 	<div class="row-fluid sub-bar intrests-bar">
@@ -86,7 +68,7 @@
 			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
 		</div>
 		<div class="span4">
-			<h2>Join</h2>
+			<h2><%= link_to "Join", new_registration_path(resource_name) %></h2>
 			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
 		</div>
 		<div class="span4">
@@ -97,42 +79,39 @@
 
 	<div class="row-fluid sub-bar wiz">
 		<div class="span12">
-			<h2>Let our wizard guide you</h2>
-			<p>The site is a dangerous place, better follow the wizard.</p>
-			<div class="mock-btn"><b>Conjure</b></div>
+			<h2>Find what you are looking for</h2>
+			<p>Use the advance search wizard to find articles.</p>
+			<div class="mock-btn"><b>Go</b></div>
 		</div>
 	</div>
-
-	<div class="row-fluid sub-bar featured-bar">
-		<div class="span4">
-			<h1>Feature article from a Farmer</h1>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-			<a href="#">Read full article...</a>
-		</div>
-		<div class="span4">
-			<h1>Feature article from a Scientist</h1>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-			<a href="#">Read full article...</a>
-		</div>
-		<div class="span4">
-			<h1>Feature article from a Businessman</h1>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-			<a href="#">Read full article...</a>
-		</div>
-	</div>
-
-	<div class="row-fluid sub-bar presentation">
-		<div class="span12">
-			<div class="span2"></div>
-			<div class="span8">
-				<h2>Step into the Forthlight</h2>
-				<p>Register to pool your findings, products and experiences with ours. Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem.</p>
-			</div>
-			<div class="span2"></div>
-		</div>
-	</div>
-
-	<%= yield %>
 </div>
-</body>
-</html>
+<div class="row-fluid sub-bar featured-bar">
+	<div class="span4">
+		<h1>Feature article from a Farmer</h1>
+		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		<a href="#">Read full article...</a>
+	</div>
+	<div class="span4">
+		<h1>Feature article from a Scientist</h1>
+		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		<a href="#">Read full article...</a>
+	</div>
+	<div class="span4">
+		<h1>Feature article from a Businessman</h1>
+		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+		<a href="#">Read full article...</a>
+	</div>
+</div>
+
+<div class="row-fluid sub-bar presentation">
+	<div class="span12">
+		<div class="span2"></div>
+		<div class="span8">
+			<h2>Step into the Forthlight</h2>
+			<p>Register to pool your findings, products and experiences with ours. Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem.</p>
+		</div>
+		<div class="span2"></div>
+	</div>
+</div>
+
+

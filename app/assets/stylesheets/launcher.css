@@ -3,52 +3,75 @@
   They will automatically be included in application.css.
   */
 
-.center-stage{
-  text-align: center;
-}
+  .center-stage {
+    text-align: center;
+  }
 
-.logo {
-  color:#fff;
-}
+  .logo {
+    color:#fff;
+    background: #da5838;
+  }
 
-/*launcher bar types*/
-.showcase {
-  padding-top:10%;
-  height:350px;
-  background: #da5838;
-  color:#fff;
-}
+  .account-box {
+    text-align: center;
+    background:#e8e8e8;
+    padding: 20px;
+    color: #333;
+    margin: 10px;
+  }
 
-.sub-bar {	
-  padding-left, padding-right:10px; 
-  padding-top:5%;
-  padding-bottom:5%;
-}
+  .fluid-field {
+    width:auto;
+  }
 
-.featured-bar {
-  text-align: left;
-  padding-left: 10px;
-}
 
-.wiz {
-  background: #da5838;
-  color:#fff;
-}
+  .login-actions {
+    display:inherit;
+  }
 
-.presentation {
-  background: #333;
-  color:#fff;
-}
+  /*login alignment fix*/
+  @media screen and (min-width: 800px){
+    .account-box {
+      text-align: left;
+    }
 
-/*end launcher bar types*/
+    .fluid-field {
+      width:100%;
+    }
 
-.mock-btn {
-  background: #3cb4d9;
-  color:#fff;
-  cursor: pointer;
-  text-align: center;
-  width:75px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  }
+
+  /*launcher bar types*/
+  .showcase {
+    padding-top:2%;
+    padding-bottom: 1%;
+    background: #da5838;
+    color:#fff;
+  }
+
+  .sub-bar {	
+    padding-right:10px; 
+    padding-top:5%;
+    padding-bottom:5%;
+  }
+
+  .featured-bar {
+    text-align: center;
+
+  }
+
+  .wiz {
+    background: #da5838;
+    color:#fff;
+  }
+
+  .presentation {
+    background: #333;
+    color:#fff;
+    text-align: center;
+  }
+
+  /*end launcher bar types*/
+
+
 
