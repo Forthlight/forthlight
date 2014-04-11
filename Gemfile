@@ -27,6 +27,12 @@ gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
+  gem 'auth', path: "../auth"
+  gem 'member', path: "../member"
+  gem 'administration', path: "../administration"
+  gem 'article', path: "../article"
+  gem 'common_domain', path: "../common_domain"
+
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '4.0.0'
@@ -39,11 +45,6 @@ end
 
 #Gems used only in development and test environment
 group :development, :test do
-  gem 'auth', path: "/vagrant/auth"
-  gem 'member', path: "/vagrant/member"
-  gem 'administration', path: "/vagrant/administration"
-  gem 'article', path: "/vagrant/article"
-  gem 'common_domain', path: "/vagrant/common_domain"
 
   gem "minitest", "4.7.5", :git => 'git://github.com/seattlerb/minitest.git'
   gem 'rspec-rails', '2.14.1'
@@ -61,13 +62,6 @@ group :development, :test do
 end
 
 
- group :production do
-  gem 'auth', path: "../auth"
-  gem 'member', path: "../member"
-  gem 'administration', path: "../administration"
-  gem 'article', path: "../article"
-  gem 'common_domain', path: "../common_domain"
-end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
