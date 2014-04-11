@@ -33,6 +33,9 @@ gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
   gem 'article', path: "../article"
   gem 'common_domain', path: "../common_domain"
 
+  #webserver
+  gem 'puma'
+
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '4.0.0'
