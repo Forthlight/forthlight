@@ -58,6 +58,7 @@ PATH
       pg (= 0.17.1)
       rails (= 4.0.3)
       simple_roles (= 0.0.12)
+      tinymce-rails
 
 GEM
   remote: https://rubygems.org/
