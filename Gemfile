@@ -27,51 +27,40 @@ gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
-  gem 'auth', path: "../auth"
-  gem 'member', path: "../member"
-  gem 'administration', path: "../administration"
-  gem 'article', path: "../article"
-  gem 'common_domain', path: "../common_domain"
+gem 'auth', path: "../auth"
+gem 'common_domain', path: "../common_domain"
+gem 'article', path: "../article"
+gem 'member', path: "../member"
+gem 'administration', path: "../administration"
 
-  #webserver
-  gem 'puma'
 
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '4.0.0'
 end
 
-#Gems used only in development environment
-group :development do
-
-end
-
 #Gems used only in development and test environment
 group :development, :test do
-
   gem "minitest", "4.7.5", :git => 'git://github.com/seattlerb/minitest.git'
   gem 'rspec-rails', '2.14.1'
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
-  #sexy deployment
+  
+  # deployment
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'rvm1-capistrano3', :require => false
   #gem 'capistrano-rvm'
-
-
 end
-
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :production do
+  # webserver
+  gem 'puma'
 end

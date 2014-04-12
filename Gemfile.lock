@@ -1,24 +1,23 @@
 GIT
   remote: git://github.com/flori/json.git
-  revision: bc46b177d520c2893b52ee13fd5ceb0b65f06a79
+  revision: b93b23d87458bc1999ea9829926a097ff5b45213
   specs:
     json (1.8.1)
 
 GIT
   remote: git://github.com/headius/thread_safe.git
-  revision: c22664cb6e967cab2bbbeea408c3dc765815e5a5
+  revision: d2c735b66b015a190de77a6200f33462dfb4aaf7
   specs:
-    thread_safe (0.3.0)
-      atomic (>= 1.1.7, < 2)
+    thread_safe (0.3.3)
 
 GIT
   remote: git://github.com/seattlerb/minitest.git
-  revision: 38f0a5fcbd9c37c3f80a3eaad4ba84d3fc9947a0
+  revision: de0f4860aa2081ff581f9ba2411c422b182f63e9
   specs:
     minitest (4.7.5)
 
 PATH
-  remote: /vagrant/administration
+  remote: ../administration
   specs:
     administration (0.0.1)
       mongoid (= 4.0.0.beta1)
@@ -26,7 +25,7 @@ PATH
       rails (= 4.0.3)
 
 PATH
-  remote: /vagrant/article
+  remote: ../article
   specs:
     article (0.0.1)
       mongoid (= 4.0.0.beta1)
@@ -35,7 +34,7 @@ PATH
       tinymce-rails
 
 PATH
-  remote: /vagrant/auth
+  remote: ../auth
   specs:
     auth (0.0.1)
       devise (= 3.2.4)
@@ -43,7 +42,7 @@ PATH
       rails (= 4.0.3)
 
 PATH
-  remote: /vagrant/common_domain
+  remote: ../common_domain
   specs:
     common_domain (0.0.1)
       mongoid (= 4.0.0.beta1)
@@ -51,10 +50,11 @@ PATH
       rails (= 4.0.3)
 
 PATH
-  remote: /vagrant/member
+  remote: ../member
   specs:
     member (0.0.1)
       mongoid (= 4.0.0.beta1)
+      nokogiri
       pg (= 0.17.1)
       rails (= 4.0.3)
       simple_roles (= 0.0.12)
@@ -89,9 +89,8 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     ast (1.1.0)
-    atomic (1.1.16)
     bcrypt (3.1.7)
-    bson (2.2.1)
+    bson (2.2.2)
     builder (3.1.4)
     capistrano (3.1.0)
       i18n
@@ -125,6 +124,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.3)
     mongoid (4.0.0.beta1)
       activemodel (>= 4.0.0)
       moped (~> 2.0.beta6)
@@ -134,12 +134,14 @@ GEM
       bson (~> 2.2)
       connection_pool (~> 1.2)
       optionable (~> 0.2.0)
-    multi_json (1.9.0)
-    net-scp (1.1.2)
+    multi_json (1.9.2)
+    net-scp (1.2.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     optionable (0.2.0)
-    origin (2.1.0)
+    origin (2.1.1)
     orm_adapter (0.5.0)
     parser (2.1.7)
       ast (~> 1.1)
@@ -147,6 +149,8 @@ GEM
     pg (0.17.1)
     polyglot (0.3.4)
     powerpack (0.0.9)
+    puma (2.8.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -164,7 +168,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
-    rake (10.1.1)
+    rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
@@ -180,7 +184,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rubocop (0.19.1)
+    rubocop (0.20.1)
       json (>= 1.7.7, < 2)
       parser (~> 2.1.7)
       powerpack (~> 0.0.6)
@@ -190,7 +194,7 @@ GEM
     rvm1-capistrano3 (1.2.2)
       capistrano (~> 3.0)
       sshkit (>= 1.2)
-    sass (3.3.3)
+    sass (3.3.4)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
@@ -201,7 +205,7 @@ GEM
     simple_roles (0.0.12)
       activerecord (>= 3.1.0)
     slop (3.5.0)
-    spork (1.0.0rc3)
+    spork (1.0.0rc4)
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
@@ -223,7 +227,7 @@ GEM
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
-    thor (0.18.1)
+    thor (0.19.1)
     tilt (1.4.1)
     tins (1.1.0)
     tinymce-rails (4.0.19)
@@ -257,6 +261,7 @@ DEPENDENCIES
   minitest (= 4.7.5)!
   mongoid (= 4.0.0.beta1)
   pg (= 0.17.1)
+  puma
   rails (= 4.0.3)
   rspec-rails (= 2.14.1)
   rubocop
