@@ -9,16 +9,16 @@
 						<ul>
 							<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path %></li>
 							<li class="visible-phone"><a href="#">Search</a></li>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Articles</a></li>
+							<li><%= link_to "Home", main_app.root_path %></li>
+							<li><%= link_to "Articles", article.publications_path %></li>
 							<li><a href="#">Blog</a></li>
 							<li><a href="#">About</a></li>
 							<li class="hidden-phone"><a href="#">Search</a></li>
 
 							<% if user_signed_in? %>
-							<%= render '../../../member/app/shared/menu' %>
+								<%= render :file => "#{Member::Engine.root}/app/views/shared/_menu.html.erb" %>
 							<% elsif admin_signed_in? %>
-							<%= render '../../../administration/app/shared/menu' %>
+								<%= render :file => "#{Administration::Engine.root}/app/views/shared/_menu.html.erb" %>
 							<% end %>
 						</ul>
 					</nav>
@@ -34,9 +34,9 @@
 					<nav>
 						<ul>
 							<% if user_signed_in? %>
-							<%= render '../../../member/app/shared/compose' %>
+								<%= render :file => "#{Member::Engine.root}/app/views/shared/_compose.html.erb" %>
 							<% elsif admin_signed_in? %>
-							<%= render '../../../administration/app/shared/menu' %>
+								<%= render :file => "#{Administration::Engine.root}/app/views/shared/_menu.html.erb" %>
 							<% end %>
 						</ul>
 					</nav>
