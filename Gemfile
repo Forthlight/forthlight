@@ -25,6 +25,13 @@ gem 'rubocop', require: false
 gem 'json', :git => "git://github.com/flori/json.git"
 gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
 
+# Pagination
+gem 'kaminari', '~> 0.15.1'
+
+# Elasticsearch
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'auth', path: "../auth"
