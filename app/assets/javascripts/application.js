@@ -13,5 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+<<<<<<< HEAD
 //= require 'common_domain'
 //= require 'article'
+=======
+//= require common_domain
+>>>>>>> a25e0b5fd3af6785e6dcba2f073e0df14f8c31a4

@@ -2,8 +2,8 @@ development:
   adapter: postgresql
   database: 'forthlight_dev'
   username: 'lightbringer'
-  password: 'local_dev'
-  host: localhost
+  password: 'global_dev'
+  host: 88.80.189.110
   pool: 5
   timeout: 5000
 
