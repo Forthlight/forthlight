@@ -23,6 +23,7 @@ PATH
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
+      tinymce-rails
 
 PATH
   remote: ../article

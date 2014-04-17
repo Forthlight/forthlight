@@ -20,6 +20,10 @@
     margin: 10px;
   }
 
+  .account-box .fluid-field {
+    padding: 5px;
+  }
+
   .fluid-field {
     width:auto;
   }
@@ -49,8 +53,7 @@
     color:#fff;
   }
 
-  .sub-bar {	
-    padding-right:10px; 
+  .sub-bar {	 
     padding-top:5%;
     padding-bottom:5%;
   }

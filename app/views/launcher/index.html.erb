@@ -18,18 +18,17 @@
 						Hello <%= current_user.first_name %>, did you know that as a aproved member you can write articles for the whole world to see? Pretty cool, huh?<br>
 						Check it out.
 					</p>
-					<div class="mock-btn"><%= link_to "Write Article", root_path %></div>
+					<div class="mock-btn"><%= link_to "Write article", member.new_publication_path %></div>
 					<% else  %>
 					<h2>Sign in</h2>
 					<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 					<div>
-						<%= f.label :login %><br />
-						<%= f.text_field :login, autofocus: true, :class=>"fluid-field" %>
+						<%= f.text_field :login, autofocus: true, :placeholder=>"Username", :class=>"fluid-field" %>
+						<br>
 					</div>
 
 					<div>
-						<%= f.label :password %><br />
-						<%= f.password_field :password, autocomplete: "off", :class=>"fluid-field" %>
+						<%= f.password_field :password, autocomplete: "off", :placeholder=>"Password", :class=>"fluid-field" %>
 					</div>
 
 					<div style="login-actions">
@@ -43,7 +42,7 @@
 
 
 						<% if devise_mapping.rememberable? -%>
-						<div>
+						<div class="check-style">
 							<%= f.check_box :remember_me %> <%= f.label :remember_me %>
 						</div>
 						<% end -%>
