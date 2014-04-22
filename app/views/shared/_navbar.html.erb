@@ -15,12 +15,12 @@
 
 							<% else %>
 							<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path %></li>
-							<li class="visible-phone"><a href="#">Search</a></li>
+							<li class="visible-phone"><%= link_to "Search", article.publications_path %></li>
 							<li><%= link_to "Home", main_app.root_path %></li>
 							<li><%= link_to "Articles", article.publications_path %></li>
 							<li><%= link_to "Blog", administration.blogs_path %></li>
 							<li><a href="#">About</a></li>
-							<li class="hidden-phone"><a href="#">Search</a></li>
+							<li class="hidden-phone"><%= link_to "Search", article.publications_path %></li>
 							<% end %>
 						</ul>
 					</nav>
