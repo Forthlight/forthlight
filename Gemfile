@@ -32,6 +32,9 @@ gem 'kaminari', '~> 0.15.1'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+# Wizard
+gem 'wicked', '~> 1.0.2'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'auth', path: "../auth"
