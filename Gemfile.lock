@@ -20,6 +20,7 @@ PATH
   remote: ../administration
   specs:
     administration (0.0.1)
+      kaminari (~> 0.15.1)
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
@@ -31,6 +32,7 @@ PATH
     article (0.0.1)
       elasticsearch-model
       elasticsearch-rails
+      kaminari (~> 0.15.1)
       mongoid (= 4.0.0.beta1)
       pg (= 0.17.1)
       rails (= 4.0.3)
@@ -50,6 +52,7 @@ PATH
   specs:
     common_domain (0.0.1)
       mongoid (= 4.0.0.beta1)
+      nokogiri
       pg (= 0.17.1)
       rails (= 4.0.3)
 
@@ -57,8 +60,8 @@ PATH
   remote: ../member
   specs:
     member (0.0.1)
+      kaminari (~> 0.15.1)
       mongoid (= 4.0.0.beta1)
-      nokogiri
       pg (= 0.17.1)
       rails (= 4.0.3)
       simple_roles (= 0.0.12)
