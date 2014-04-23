@@ -35,6 +35,7 @@ PATH
       pg (= 0.17.1)
       rails (= 4.0.3)
       tinymce-rails
+      wicked (~> 1.0.2)
 
 PATH
   remote: ../auth
@@ -264,6 +265,8 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    wicked (1.0.2)
+      rails (>= 3.0.7)
 
 PLATFORMS
   ruby
