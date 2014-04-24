@@ -5,9 +5,9 @@
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
 
-role :app, %w{deploy@forthlight.johandamm.com}
-role :web, %w{deploy@forthlight.johandamm.com}
-role :db,  %w{deploy@forthlight.johandamm.com}
+role :app, %w{jodg11@forthlight.johandamm.com}
+role :web, %w{jodg11@forthlight.johandamm.com}
+role :db,  %w{jodg11@forthlight.johandamm.com}
 
 # Extended Server Syntax
 # ======================
@@ -16,7 +16,7 @@ role :db,  %w{deploy@forthlight.johandamm.com}
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 server 'forthlight.johandamm.com', user: 'jodg11', roles: %w{web app}, my_property: :my_value
-set :branch, "master"
+set :branch, "dev"
 set :deploy_to, '~/www/forthlight/'
 
 # you can set custom ssh options
