@@ -7,12 +7,13 @@ set :rvm_ruby_version, '2.1.0'      # Defaults to: 'default'
 set :rvm_custom_path, '´~/jodg11/.rvm/'  # only needed if not detected
 
 
-set :linked_dirs, %w{tmp/pids tmp/sockets log}
+#set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :application, 'forthlight'
 set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
 set :ssh_options, {:forward_agent => true}
+set :git_enable_submodules, 1
 
  #Default branch is :master
   #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -28,9 +29,3 @@ set :ssh_options, {:forward_agent => true}
  set :deploy_via, :copy
  set :keep_releases, 2
  set :pty, true
-
-before :deploy, "deploy:do_the_git"
-
-  task :do_the_git do
-    run "git clone https://github.com/Forthlight/administration.git"
-  end
