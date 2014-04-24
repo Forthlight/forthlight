@@ -35,6 +35,9 @@ gem 'elasticsearch-rails'
 # Wizard
 gem 'wicked', '~> 1.0.2'
 
+# Gem to sanitize html input from tinymce text editor
+gem 'sanitize', '~> 2.1.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'auth', path: "../auth"
@@ -42,7 +45,6 @@ gem 'common_domain', path: "../common_domain"
 gem 'article', path: "../article"
 gem 'member', path: "../member"
 gem 'administration', path: "../administration"
-
 
 group :assets do
   # Use SCSS for stylesheets
