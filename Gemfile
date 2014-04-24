@@ -64,6 +64,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'rvm1-capistrano3', :require => false
+  gem 'capistrano/git'
   #gem 'capistrano-rvm'
 end
 
