@@ -27,5 +27,5 @@ set :git_strategy, SubmoduleStrategy
  set :use_sudo, false
  set :rails_env, "production"
  set :deploy_via, :copy
- set :keep_releases, 2
+ set :keep_releases, 0
  set :pty, true
