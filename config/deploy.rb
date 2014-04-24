@@ -13,7 +13,7 @@ set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
 set :ssh_options, {:forward_agent => true}
-set :git_enable_submodules, 1
+set :git_strategy, SubmoduleStrategy
 
  #Default branch is :master
   #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }

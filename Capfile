@@ -19,6 +19,7 @@ require 'capistrano/deploy'
 # require 'capistrano/chruby'
  require 'capistrano/bundler'
  require 'capistrano/git'
+ require './lib/capistrano/submodule_strategy'
  require 'capistrano/rails/assets'
  require 'capistrano/rails/migrations'
 
