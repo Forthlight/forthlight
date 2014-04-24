@@ -7,7 +7,7 @@
 			<div class="span2"></div>
 			<div class="span4">
 				<p>
-					This is a long and explanatory slogan that explains what we do around these parts.
+					We are an open source knowledge sharing site for development and research in the fields of solar energy. 
 				</p>
 			</div>
 			<div class="span4 account-box">		
@@ -15,16 +15,15 @@
 				<div class="span8">
 					<% if user_signed_in? %>
 					<p>
-						Hello <%= current_user.first_name %>, did you know that as a aproved member you can write articles for the whole world to see? Pretty cool, huh?<br>
-						Check it out.
+						Hello <%= current_user.first_name %>, did you know that as a aproved member you can write articles for the whole world to see? <br>
+						Try it out.
 					</p>
-					<div class="mock-btn"><%= link_to "Write article", member.new_publication_path %></div>
+					<div><%= link_to "Write article", member.new_publication_path, :class=>"mock-btn" %></div>
 					<% else  %>
 					<h2>Sign in</h2>
 					<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 					<div>
 						<%= f.text_field :login, autofocus: true, :placeholder=>"Username", :class=>"fluid-field" %>
-						<br>
 					</div>
 
 					<div>
@@ -64,22 +63,22 @@
 	<div class="row-fluid sub-bar intrests-bar">
 		<div class="span4">
 			<h2>Read</h2>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<p>Find and read articles about anything related to solar energy applications. Anyone can read and learn about research data, user projects or commercial products.</p>
 		</div>
 		<div class="span4">
 			<h2><%= link_to "Join", new_registration_path(resource_name) %></h2>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<p>Start writing your own articles and share you knowledge with the world. Just do a quick registration and you will be part of the Forthlight family in no time.</p>
 		</div>
 		<div class="span4">
 			<h2>Share</h2>
-			<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
+			<p>All our articles are easy to print and share with other, even if they don't have access to a computer or phone. Our knowledge isn't bound to the screen but to the real world.</p>
 		</div>
 	</div>
 
 	<div class="row-fluid sub-bar wiz">
 		<div class="span12">
 			<h2>Find what you are looking for</h2>
-			<p>Use the advance search wizard to find articles.</p>
+			<p>Use the guided search to find articles.</p>
 			<div><%= link_to "Go", article.guide_path(:type), :class => "mock-btn" %></div>
 		</div>
 	</div>
@@ -107,7 +106,7 @@
 		<div class="span2"></div>
 		<div class="span8">
 			<h2>Step into the Forthlight</h2>
-			<p>Register to pool your findings, products and experiences with ours. Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem.</p>
+			<p>Register to pool your findings, products and experiences with ours.</p>
 		</div>
 		<div class="span2"></div>
 	</div>
