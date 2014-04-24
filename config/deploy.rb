@@ -9,7 +9,6 @@ set :rvm_custom_path, '´~/jodg11/.rvm/'  # only needed if not detected
 
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :application, 'forthlight'
-set :repo_url, 'git@github.com:Forthlight/administration.git'
 set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
@@ -30,3 +29,8 @@ set :ssh_options, {:forward_agent => true}
  set :keep_releases, 2
  set :pty, true
 
+before :deploy, "deploy:do_the_git"
+
+  task :do_the_git do
+    run "git clone https://github.com/Forthlight/administration.git"
+  end
