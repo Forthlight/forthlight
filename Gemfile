@@ -46,7 +46,6 @@ gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'de
 gem 'member', :git => 'git://github.com/Forthlight/member.git', :branch => 'dev'
 gem 'administration', :git => 'git://github.com/Forthlight/administration.git', :branch => 'dev'
 
-
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '4.0.0'
