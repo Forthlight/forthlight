@@ -1,5 +1,5 @@
 
-# config valid only for Capistrano 3.1
+# config valid only for Capistrano 3.2
 lock '3.2.0'
 set :rvm1_ruby_version, "ruby-2.1.0"
 set :rvm_type, :user                     # Defaults to: :auto
@@ -13,7 +13,7 @@ set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
 set :ssh_options, {:forward_agent => true}
-set :git_strategy, SubmoduleStrategy
+
 
  #Default branch is :master
   #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -22,10 +22,20 @@ set :git_strategy, SubmoduleStrategy
 
 
  #Default value for :scm is :git
- set :scm, :git
+ set :scm, :git 
  set :user, 'jodg11'
  set :use_sudo, false
  set :rails_env, "production"
  set :deploy_via, :copy
- set :keep_releases, 0
+ set :keep_releases, 1
  set :pty, true
+
+  task :bundle_list do
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :bundle, "list"
+        end
+      end
+    end
+  end
