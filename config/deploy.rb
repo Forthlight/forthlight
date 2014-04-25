@@ -26,7 +26,7 @@ set :ssh_options, {:forward_agent => true}
  set :user, 'jodg11'
  set :use_sudo, false
  set :rails_env, "production"
- set :deploy_via, :remote_cache
+ set :deploy_via, :copy
  set :keep_releases, 5
  set :pty, true
 
