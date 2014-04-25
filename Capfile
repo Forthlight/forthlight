@@ -1,4 +1,5 @@
 # Load DSL and Setup Up Stages
+require 'rvm1/capistrano3'
 require 'capistrano/setup'
 # Includes default deployment tasks
 require 'capistrano/deploy'
@@ -15,7 +16,7 @@ require 'capistrano/rails/assets'
 #   https://github.com/capistrano/chruby
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
-	require 'rvm1/capistrano3'
+ 
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
