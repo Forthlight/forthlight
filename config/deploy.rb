@@ -29,3 +29,12 @@ set :git_strategy, SubmoduleStrategy
  set :deploy_via, :copy
  set :keep_releases, 0
  set :pty, true
+ task :bundle_list do
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :bundle, "list"
+        end
+      end
+    end
+  end
