@@ -44,7 +44,7 @@ gem 'auth', path: "../auth"
 gem 'common_domain', path: "../common_domain"
 gem 'article', path: "../article"
 gem 'member', path: "../member"
-gem 'administration', path: "../administration", :git => 'git@github.com:Forthlight/administration.git'
+gem 'administration', path: "../administration"
 
 group :assets do
   # Use SCSS for stylesheets

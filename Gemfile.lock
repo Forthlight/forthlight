@@ -16,11 +16,6 @@ GIT
   specs:
     minitest (4.7.5)
 
-GIT
-  remote: git@github.com:Forthlight/administration.git
-  revision: 09f3f274af2130afb68f9217b89c34b990107883
-  specs:
-
 PATH
   remote: ../administration
   specs:
