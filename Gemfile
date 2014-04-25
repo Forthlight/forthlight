@@ -40,11 +40,11 @@ gem 'sanitize', '~> 2.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'auth', path: "../auth"
-gem 'common_domain', path: "../common_domain"
-gem 'article', path: "../article"
-gem 'member', path: "../member"
-gem 'administration', :git => 'git@github.com:Forthlight/administration.git', :branch => 'dev'
+gem 'auth', :git => 'git://github.com/Forthlight/auth.git', :branch => 'dev'
+gem 'common_domain', :git => 'git://github.com/Forthlight/common_domain.git', :branch => 'dev'
+gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'dev'
+gem 'member', :git => 'git://github.com/Forthlight/member.git', :branch => 'dev'
+gem 'administration', :git => 'git://github.com/Forthlight/administration.git', :branch => 'dev'
 
 group :assets do
   # Use SCSS for stylesheets
