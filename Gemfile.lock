@@ -16,6 +16,58 @@ GIT
   specs:
     minitest (4.7.5)
 
+PATH
+  remote: ../administration
+  specs:
+    administration (0.0.1)
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      tinymce-rails
+
+PATH
+  remote: ../article
+  specs:
+    article (0.0.1)
+      elasticsearch-model
+      elasticsearch-rails
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      tinymce-rails
+      wicked (~> 1.0.2)
+
+PATH
+  remote: ../auth
+  specs:
+    auth (0.0.1)
+      devise (= 3.2.4)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+
+PATH
+  remote: ../common_domain
+  specs:
+    common_domain (0.0.1)
+      mongoid (= 4.0.0.beta1)
+      nokogiri
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      sanitize (~> 2.1.0)
+
+PATH
+  remote: ../member
+  specs:
+    member (0.0.1)
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      simple_roles (= 0.0.12)
+      tinymce-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,6 +97,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     ast (1.1.0)
+    bcrypt (3.1.7)
     bson (2.2.2)
     builder (3.1.4)
     capistrano (3.2.0)
@@ -62,6 +115,12 @@ GEM
     capistrano_colors (0.5.5)
     connection_pool (2.0.0)
     database_cleaner (1.2.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     elasticsearch (1.0.1)
       elasticsearch-api (= 1.0.1)
@@ -114,6 +173,7 @@ GEM
       mini_portile (~> 0.5.0)
     optionable (0.2.0)
     origin (2.1.1)
+    orm_adapter (0.5.0)
     parser (2.1.8)
       ast (~> 1.1)
       slop (~> 3.4, >= 3.4.5)
@@ -173,6 +233,8 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    simple_roles (0.0.12)
+      activerecord (>= 3.1.0)
     slop (3.5.0)
     spork (1.0.0rc4)
     spork-rails (4.0.0)
@@ -199,6 +261,8 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     tins (1.1.0)
+    tinymce-rails (4.0.19)
+      railties (>= 3.1.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -206,6 +270,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     wicked (1.0.2)
       rails (>= 3.0.7)
 
@@ -213,10 +279,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  administration!
+  article!
+  auth!
   capistrano
   capistrano-bundler
   capistrano-git
   capistrano-rails
+  common_domain!
   database_cleaner (= 1.2.0)
   elasticsearch-model
   elasticsearch-rails
@@ -224,6 +294,7 @@ DEPENDENCIES
   jquery-rails (= 3.1.0)
   json!
   kaminari (~> 0.15.1)
+  member!
   minitest (= 4.7.5)!
   mongoid (= 4.0.0.beta1)
   pg (= 0.17.1)
