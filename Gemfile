@@ -53,7 +53,7 @@ group :development, :test do
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
 
-  if ENV[ 'RAILS_ENV' ] = 'development' || ENV[ 'RAILS_ENV' ] = 'test'
+  if ENV[ 'RAILS_ENV' ] != 'production' || ENV[ 'RAILS_ENV' ] != 'staging'
     # local engines for development, production should use remote, via git
     gem 'common_domain', path: '../common_domain'
     gem 'auth', path: '../auth'
@@ -69,7 +69,7 @@ group :doc do
 end
 
 group :staging, :production do
-  if ENV[ 'RAILS_ENV' ] = 'production' || ENV[ 'RAILS_ENV' ] = 'staging'
+  if ENV[ 'RAILS_ENV' ] == 'production' || ENV[ 'RAILS_ENV' ] == 'staging'
     gem 'common_domain', :git => 'git://github.com/Forthlight/common_domain.git', :branch => 'dev'
     gem 'auth', :git => 'git://github.com/Forthlight/auth.git', :branch => 'dev'
     gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'dev'
