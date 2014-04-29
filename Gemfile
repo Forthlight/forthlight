@@ -53,7 +53,7 @@ group :development, :test do
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
 
-  if ENV[ 'RAILS_ENV' ] != 'production' || ENV[ 'RAILS_ENV' ] != 'staging'
+  if ENV[ 'RAILS_ENV' ] == 'development' || ENV[ 'RAILS_ENV' ] == 'test'
     # local engines for development, production should use remote, via git
     gem 'common_domain', path: '../common_domain'
     gem 'auth', path: '../auth'
