@@ -12,8 +12,7 @@ set :application, 'forthlight'
 set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
-set :ssh_options, {:forward_agent => true}
-
+#set :ssh_options, {:forward_agent => true}
 
  #Default branch is :master
   #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -25,17 +24,17 @@ set :ssh_options, {:forward_agent => true}
  set :scm, :git 
  set :user, 'jodg11'
  set :use_sudo, false
- set :rails_env, "production"
+
  set :deploy_via, :copy
  set :keep_releases, 5
  set :pty, true
 
-  task :bundle_list do
-    on roles(:app) do
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :bundle, "list"
-        end
-      end
-    end
-  end
+  # task :bundle_list do
+  #   on roles(:app) do
+  #     within release_path do
+  #       with rails_env: fetch(:rails_env) do
+  #         execute :bundle, "list"
+  #       end
+  #     end
+  #   end
+  # end

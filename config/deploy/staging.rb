@@ -7,7 +7,9 @@
 role :app, %w{jodg11@stagelight.johandamm.com}
 role :web, %w{jodg11@stagelight.johandamm.com}
 role :db,  %w{jodg11@stagelight.johandamm.com}
+
 set :rails_env, "staging"
+
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server
