@@ -1,66 +1,4 @@
 GIT
-  remote: git://github.com/Forthlight/administration.git
-  revision: 3d27113a005a23b6e31d73635d3aea2229081dea
-  branch: dev
-  specs:
-    administration (0.0.1)
-      kaminari (~> 0.15.1)
-      mongoid (= 4.0.0.beta1)
-      pg (= 0.17.1)
-      rails (= 4.0.3)
-      tinymce-rails
-
-GIT
-  remote: git://github.com/Forthlight/article.git
-  revision: b3dff51bf595ed56caef9a713dd35e719d773047
-  branch: dev
-  specs:
-    article (0.0.1)
-      elasticsearch-model
-      elasticsearch-rails
-      kaminari (~> 0.15.1)
-      mongoid (= 4.0.0.beta1)
-      pg (= 0.17.1)
-      rails (= 4.0.3)
-      tinymce-rails
-      wicked (~> 1.0.2)
-
-GIT
-  remote: git://github.com/Forthlight/auth.git
-  revision: aadeeeef8ee8524296970d2d458204b497aff9f4
-  branch: dev
-  specs:
-    auth (0.0.1)
-      devise (= 3.2.4)
-      pg (= 0.17.1)
-      rails (= 4.0.3)
-
-GIT
-  remote: git://github.com/Forthlight/common_domain.git
-  revision: 625fbdde5a515f2a031dbf950014512aee6bcc96
-  branch: dev
-  specs:
-    common_domain (0.0.1)
-      mongoid (= 4.0.0.beta1)
-      nokogiri
-      pg (= 0.17.1)
-      rails (= 4.0.3)
-      sanitize (~> 2.1.0)
-
-GIT
-  remote: git://github.com/Forthlight/member.git
-  revision: f4264d135a5b6481b86dbf58b609cf61d55b2194
-  branch: dev
-  specs:
-    member (0.0.1)
-      kaminari (~> 0.15.1)
-      mongoid (= 4.0.0.beta1)
-      pg (= 0.17.1)
-      rails (= 4.0.3)
-      simple_roles (= 0.0.12)
-      tinymce-rails
-
-GIT
   remote: git://github.com/flori/json.git
   revision: b93b23d87458bc1999ea9829926a097ff5b45213
   specs:
@@ -77,6 +15,58 @@ GIT
   revision: db17ed9a57403eb914c96457db037b0b4056016f
   specs:
     minitest (4.7.5)
+
+PATH
+  remote: ../administration
+  specs:
+    administration (0.0.1)
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      tinymce-rails
+
+PATH
+  remote: ../article
+  specs:
+    article (0.0.1)
+      elasticsearch-model
+      elasticsearch-rails
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      tinymce-rails
+      wicked (~> 1.0.2)
+
+PATH
+  remote: ../auth
+  specs:
+    auth (0.0.1)
+      devise (= 3.2.4)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+
+PATH
+  remote: ../common_domain
+  specs:
+    common_domain (0.0.1)
+      mongoid (= 4.0.0.beta1)
+      nokogiri
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      sanitize (~> 2.1.0)
+
+PATH
+  remote: ../member
+  specs:
+    member (0.0.1)
+      kaminari (~> 0.15.1)
+      mongoid (= 4.0.0.beta1)
+      pg (= 0.17.1)
+      rails (= 4.0.3)
+      simple_roles (= 0.0.12)
+      tinymce-rails
 
 GEM
   remote: https://rubygems.org/
@@ -190,8 +180,6 @@ GEM
     pg (0.17.1)
     polyglot (0.3.4)
     powerpack (0.0.9)
-    puma (2.8.2)
-      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -310,7 +298,6 @@ DEPENDENCIES
   minitest (= 4.7.5)!
   mongoid (= 4.0.0.beta1)
   pg (= 0.17.1)
-  puma
   rails (= 4.0.3)
   rspec-rails (= 2.14.1)
   rubocop

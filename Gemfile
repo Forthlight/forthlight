@@ -38,13 +38,12 @@ gem 'wicked', '~> 1.0.2'
 # Gem to sanitize html input from tinymce text editor
 gem 'sanitize', '~> 2.1.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-gem 'auth', :git => 'git://github.com/Forthlight/auth.git', :branch => 'dev'
-gem 'common_domain', :git => 'git://github.com/Forthlight/common_domain.git', :branch => 'dev'
-gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'dev'
-gem 'member', :git => 'git://github.com/Forthlight/member.git', :branch => 'dev'
-gem 'administration', :git => 'git://github.com/Forthlight/administration.git', :branch => 'dev'
+# local engines for development, production should use remote, via git
+gem 'auth', path: '../auth'
+gem 'common_domain', path: '../common_domain'
+gem 'article', path: '../article'
+gem 'member', path: '../member'
+gem 'administration', path: '../administration'
 
 group :assets do
   # Use SCSS for stylesheets
@@ -58,8 +57,14 @@ group :development, :test do
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
-  
-  # deployment
+end
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+group :staging do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
@@ -68,12 +73,6 @@ group :development, :test do
   #gem 'capistrano-rvm'
 end
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 group :production do
-  # webserver
-  gem 'puma'
+
 end

@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require common_domain
+//= require article
 //= require_tree .
 
