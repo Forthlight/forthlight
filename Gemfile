@@ -38,12 +38,7 @@ gem 'wicked', '~> 1.0.2'
 # Gem to sanitize html input from tinymce text editor
 gem 'sanitize', '~> 2.1.0'
 
-# local engines for development, production should use remote, via git
-gem 'auth', path: '../auth'
-gem 'common_domain', path: '../common_domain'
-gem 'article', path: '../article'
-gem 'member', path: '../member'
-gem 'administration', path: '../administration'
+
 
 group :assets do
   # Use SCSS for stylesheets
@@ -57,6 +52,15 @@ group :development, :test do
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
+
+  if ENV[ 'RAILS_ENV' ] != 'production' || ENV[ 'RAILS_ENV' ] != 'staging'
+    # local engines for development, production should use remote, via git
+    gem 'common_domain', path: '../common_domain'
+    gem 'auth', path: '../auth'
+    gem 'article', path: '../article'
+    gem 'member', path: '../member'
+    gem 'administration', path: '../administration'
+   end
 end
 
 group :doc do
@@ -64,7 +68,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :staging do
+group :staging, :production do
+  if ENV[ 'RAILS_ENV' ] == 'production' || ENV[ 'RAILS_ENV' ] == 'staging'
+    gem 'common_domain', :git => 'git://github.com/Forthlight/common_domain.git', :branch => 'dev'
+    gem 'auth', :git => 'git://github.com/Forthlight/auth.git', :branch => 'dev'
+    gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'dev'
+    gem 'member', :git => 'git://github.com/Forthlight/member.git', :branch => 'dev'
+    gem 'administration', :git => 'git://github.com/Forthlight/administration.git', :branch => 'dev'
+  end
+
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
