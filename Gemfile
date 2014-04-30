@@ -70,6 +70,7 @@ group :doc do
 end
 
 group :staging, :production do
+  gem 'unicorn'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
