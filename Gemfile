@@ -73,7 +73,7 @@ group :staging, :production do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano-git'
+  #gem 'capistrano-git'
   gem 'rvm1-capistrano3', :require => false
   #gem 'capistrano-rvm'
 end
