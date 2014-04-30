@@ -24,7 +24,7 @@ set :ssh_options, {:forward_agent => true}
  set :use_sudo, false
 
  set :deploy_via, :copy
- set :keep_releases, 5
+ set :keep_releases, 100
  set :pty, true
 
   # task :bundle_list do
