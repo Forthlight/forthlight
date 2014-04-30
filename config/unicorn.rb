@@ -4,7 +4,7 @@ working_directory "~/www/stagelight/forthlight/current/"
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
-pid "~/www/stagelight/forthlight/current/pids/unicorn.pid"
+pid "~/www/stagelight/forthlight/shared/pids/unicorn.pid"
 
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"
