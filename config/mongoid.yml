@@ -82,7 +82,7 @@ production:
 staging:
   sessions:
     default:
-      database: forthlight_test
+      database: forthlight_development
       hosts:
         - 127.0.0.1:27017
       options:
