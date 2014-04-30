@@ -59,7 +59,7 @@ gem 'administration', :git => 'git://github.com/Forthlight/administration.git', 
 group :development, :test do
   gem "minitest", "4.7.5", :git => 'git://github.com/seattlerb/minitest.git'
   gem 'rspec-rails', '2.14.1'
-  gem 'fabrication', '2.9.6'
+  gem 'fabrication', '2.9.6'2
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
 end
