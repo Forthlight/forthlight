@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.2
-lock '3.2.0'
+lock '3.2.1'
 set :rvm1_ruby_version, "ruby-2.1.0"
 set :rvm_type, :user                     # Defaults to: :auto
 set :rvm_ruby_version, '2.1.0'      # Defaults to: 'default'
