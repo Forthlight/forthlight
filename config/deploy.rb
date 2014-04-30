@@ -3,7 +3,7 @@ lock '3.2.0'
 set :rvm1_ruby_version, "ruby-2.1.0"
 set :rvm_type, :user                     # Defaults to: :auto
 set :rvm_ruby_version, '2.1.0'      # Defaults to: 'default'
-set :rvm_custom_path, '´~/jodg11/.rvm/'  # only needed if not detected
+#set :rvm_custom_path, '´~/jodg11/.rvm'  # only needed if not detected
 
 #set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :application, 'forthlight'
