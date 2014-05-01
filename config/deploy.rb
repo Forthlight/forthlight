@@ -6,7 +6,7 @@ set :rvm_ruby_version, '2.1.0'      # Defaults to: 'default'
 #set :rvm_custom_path, '´~/jodg11/.rvm'  # only needed if not detected
 
 #set :linked_dirs, %w{tmp/pids tmp/sockets log}
-
+set :application, 'forthlight'
 set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
