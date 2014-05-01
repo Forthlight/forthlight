@@ -7,7 +7,7 @@
 role :app, %w{jodg11@stagelight.johandamm.com}
 role :web, %w{jodg11@stagelight.johandamm.com}
 role :db,  %w{jodg11@stagelight.johandamm.com}
-
+set :application, 'stagelight'
 set :rails_env, "staging"
 
 # Extended Server Syntax

@@ -6,7 +6,7 @@ set :rvm_ruby_version, '2.1.0'      # Defaults to: 'default'
 #set :rvm_custom_path, '´~/jodg11/.rvm'  # only needed if not detected
 
 #set :linked_dirs, %w{tmp/pids tmp/sockets log}
-set :application, 'forthlight'
+
 set :repo_url, 'https://github.com/Forthlight/forthlight.git'
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
@@ -24,7 +24,7 @@ set :ssh_options, {:forward_agent => true}
  set :use_sudo, false
 
  set :deploy_via, :copy
- set :keep_releases, 100
+ set :keep_releases, 100 # this is a temporary fix to a cleanup problem with capistrano
  set :pty, true
 
   # task :bundle_list do
