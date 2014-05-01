@@ -23,7 +23,7 @@ set :ssh_options, {:forward_agent => true}
  set :user, 'jodg11'
  set :use_sudo, false
 
- set :deploy_via, :copy
+ set :deploy_via, :remote_cache
  set :keep_releases, 100 # this is a temporary fix to a cleanup problem with capistrano
  set :pty, true
 
