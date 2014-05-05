@@ -27,7 +27,6 @@ gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git'
 
 # Pagination
 gem 'kaminari', '~> 0.15.1'
-
 # Elasticsearch
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
@@ -38,18 +37,23 @@ gem 'wicked', '~> 1.0.2'
 # Gem to sanitize html input from tinymce text editor
 gem 'sanitize', '~> 2.1.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-gem 'auth', path: "../auth"
-gem 'common_domain', path: "../common_domain"
-gem 'article', path: "../article"
-gem 'member', path: "../member"
-gem 'administration', path: "../administration"
-
 group :assets do
   # Use SCSS for stylesheets
   gem 'sass-rails', '4.0.0'
 end
+
+# local engines for development, production should use remote, via git
+# gem 'common_domain', path: '../common_domain'
+# gem 'auth', path: '../auth'
+# gem 'article', path: '../article'
+# gem 'member', path: '../member'
+# gem 'administration', path: '../administration'
+
+gem 'common_domain', :git => 'git://github.com/Forthlight/common_domain.git', :branch => 'dev'
+gem 'auth', :git => 'git://github.com/Forthlight/auth.git', :branch => 'dev'
+gem 'article', :git => 'git://github.com/Forthlight/article.git', :branch => 'dev'
+gem 'member', :git => 'git://github.com/Forthlight/member.git', :branch => 'dev'
+gem 'administration', :git => 'git://github.com/Forthlight/administration.git', :branch => 'dev'
 
 #Gems used only in development and test environment
 group :development, :test do
@@ -58,13 +62,6 @@ group :development, :test do
   gem 'fabrication', '2.9.6'
   gem "database_cleaner", "1.2.0"
   gem "spork-rails", '~> 4.0.0'
-  
-  # deployment
-  gem 'capistrano'
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler'
-  gem 'rvm1-capistrano3', :require => false
-  #gem 'capistrano-rvm'
 end
 
 group :doc do
@@ -72,7 +69,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :production do
-  # webserver
+group :staging, :production do
   gem 'puma'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  #gem 'capistrano-puma', require: false
+  #gem 'capistrano-git'
+  #gem 'rvm1-capistrano3', :require => false
+  gem 'capistrano-rvm'
+end
+
+group :production do
+
 end

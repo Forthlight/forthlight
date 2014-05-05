@@ -8,21 +8,25 @@
 					<nav>
 						<ul>
 							<% if admin_signed_in? %>
-							<%= render :file => "#{Administration::Engine.root}/app/views/shared/_menu.html.erb" %>
+								<%= render :file => "#{Administration::Engine.root}/app/views/shared/_menu.html.erb" %>
 
 							<% elsif user_signed_in? %>				
-							<%= render :file => "#{Member::Engine.root}/app/views/shared/_menu.html.erb" %>
+								<%= render :file => "#{Member::Engine.root}/app/views/shared/_menu.html.erb" %>
 
 							<% else %>
-							<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path %></li>
-							<li class="visible-phone"><%= link_to "Search", article.publications_path %></li>
-							<li><%= link_to "Home", main_app.root_path %></li>
-							<li><%= link_to "Articles", article.publications_path %></li>
-							<li><%= link_to "Blog", administration.blogs_path %></li>
-							<li><a href="#">About</a></li>
-							<li class="hidden-phone"><%= link_to "Search", article.publications_path %></li>
+								<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path %></li>
+								<li><%= link_to "Home", main_app.root_path %></li>
+								<li><%= link_to "Articles", article.publications_path %></li>
+								<li><%= link_to "Blog", administration.blogs_path %></li>
+								<li><a href="#">About</a></li>
+							
 							<% end %>
 						</ul>
+
+						<%= form_tag(article.publications_search_path, method: :get, :class => "nav-search hidden-phone") do -%>
+							<%= search_field_tag 'keyword', params['keyword'], :placeholder=>"Search...", :class => "searchbar" %>
+							<%= submit_tag 'Go', :class=>"mock-btn" %>
+						<% end -%>
 					</nav>
 				</div>
 			</div>
@@ -40,9 +44,10 @@
 							<% elsif admin_signed_in? %>
 								<%= render :file => "#{Administration::Engine.root}/app/views/shared/_shortcuts.html.erb" %>
 							<% else %>
-								<p>
-									Page by students @BTH 
-								</p>
+								<ul>
+									<li>Forthlight was developed by students at BTH</li>
+									<li></li>
+								</ul>
 							<% end %>
 						</ul>
 					</nav>

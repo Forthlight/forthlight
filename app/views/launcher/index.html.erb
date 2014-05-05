@@ -84,20 +84,23 @@
 	</div>
 </div>
 <div class="row-fluid sub-bar featured-bar">
-	<div class="span4">
-		<h1>Feature article from a Farmer</h1>
-		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-		<a href="#">Read full article...</a>
-	</div>
-	<div class="span4">
-		<h1>Feature article from a Scientist</h1>
-		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-		<a href="#">Read full article...</a>
-	</div>
-	<div class="span4">
-		<h1>Feature article from a Businessman</h1>
-		<p>Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem Lorem lorem Lorem loremLorem loremLorem loremLorem lorem</p>
-		<a href="#">Read full article...</a>
+	<h2 style="text-align: center">Featured articles</h2>
+	<div class="row-fluid">
+		<div class="span4">
+			<h1><%= @fReg.title %></h1>
+			<p><%= truncate_to_paragraph(@fReg.content, 255) %></p>
+			<%= link_to "Read more", article.publications_path(@fReg.id) %>
+		</div>
+		<div class="span4">
+			<h1><%= @fSci.title %></h1>
+			<p><%= truncate_to_paragraph(@fSci.content, 255) %></p>
+			<%= link_to "Read more", article.publications_path(@fReg.id) %>
+		</div>
+		<div class="span4">
+			<h1><%= @fBus.title %></h1>
+			<p><%= truncate_to_paragraph(@fBus.content, 255) %></p>
+			<%= link_to "Read more", article.publications_path(@fReg.id) %>
+		</div>
 	</div>
 </div>
 
