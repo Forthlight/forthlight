@@ -55,7 +55,6 @@ PATH
       nokogiri
       pg (= 0.17.1)
       rails (= 4.0.3)
-      sanitize (~> 2.1.0)
 
 PATH
   remote: ../member
