@@ -24,8 +24,8 @@
 						</ul>
 
 						<%= form_tag(article.publications_search_path, method: :get, :class => "nav-search hidden-phone") do -%>
-							<%= search_field_tag 'keyword', params['keyword'], :placeholder=>"Search...", :class => "searchbar" %>
-							<%= submit_tag 'Go', :class=>"mock-btn" %>
+							<%= search_field_tag 'keyword', params['keyword'], :placeholder=>"Search...", :class => "launcher-searchbar" %>
+							<%= submit_tag 'Go', :class=>"launcher-btn" %>
 						<% end -%>
 					</nav>
 				</div>
