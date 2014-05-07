@@ -20,14 +20,11 @@
     margin: 10px;
   }
 
-  .account-box .fluid-field {
-    padding: 5px;
-  }
-
   .fluid-field {
+    padding: 5px;
     width:auto;
+    margin-bottom: 0.5em;
   }
-
 
   .login-actions {
     display:inherit;
@@ -54,13 +51,16 @@
   }
 
   .sub-bar {	 
-    padding-top:5%;
-    padding-bottom:5%;
+    padding-top:4%;
+    padding-bottom:4%;
+  }
+
+  .launch-item {   
+    padding: 0 2%;
   }
 
   .featured-bar {
     text-align: center;
-
   }
 
   .wiz {

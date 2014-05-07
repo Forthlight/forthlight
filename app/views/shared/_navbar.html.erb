@@ -14,7 +14,7 @@
 								<%= render :file => "#{Member::Engine.root}/app/views/shared/_menu.html.erb" %>
 
 							<% else %>
-								<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path %></li>
+								<li class="hidden-phone"><%= link_to "Forthlight", main_app.root_path, :class => "logo-link" %></li>
 								<li><%= link_to "Home", main_app.root_path %></li>
 								<li><%= link_to "Articles", article.publications_path %></li>
 								<li><%= link_to "Blog", administration.blogs_path %></li>

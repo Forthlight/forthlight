@@ -37,7 +37,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/common_domain.git
-  revision: 0226ba28c143b9e66571fcbde1e335ea059693ce
+  revision: 2321cfa6719395cbe19c2f6d2c22a8fde283303d
   branch: dev
   specs:
     common_domain (0.0.1)

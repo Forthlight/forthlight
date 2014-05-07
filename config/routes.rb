@@ -9,4 +9,6 @@ Forthlight::Application.routes.draw do
   mount Article::Engine, at: "/article"
   mount Member::Engine, at: "/member"
   mount Administration::Engine, at: "/administration"
+
+  get "/blogs", :to => redirect("/administration/blogs"), as: :blogs
 end
