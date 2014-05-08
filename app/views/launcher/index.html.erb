@@ -9,8 +9,8 @@
 				</p>
 			</div>
 			<div class="span4 account-box">		
-				<div class="span2"></div>
-				<div class="span8">
+				<div class="span1"></div>
+				<div class="span10">
 					<% if user_signed_in? %>
 						<p>
 							Hello <%= current_user.first_name %>, did you know that as a member you can write articles for the whole world to see? <br>
@@ -32,20 +32,21 @@
 								<% if devise_mapping.rememberable? -%>
 									<div class="check-style">
 										<%= f.check_box :remember_me %> <%= f.label :remember_me %>
-										<%= render "users/shared/links" %>
 									</div>
 								<% end -%>
+								<%= render "users/shared/links" %>
 
 								<div class="row-fluid">
-									<%= f.submit "Sign in", :class=>"mock-btn" %>
-									or
-									<%= link_to "Register", new_registration_path(resource_name), :class=>"mock-btn", :style=>" padding: 0 0;" %>
+									<div class="span12">
+										<%= f.submit "Sign in", :class=>"mock-btn" %>
+										<%= link_to "Register", new_registration_path(resource_name), :class=>"mock-btn", :style=>" padding: 0 0;" %>
+									</div>
 								</div>
 							</div>
 						<% end %>		
 					<% end %>
 				</div>
-				<div class="span2"></div>
+				<div class="span1"></div>
 			</div>	
 			<div class="span2"></div>				
 		</div>
