@@ -1,0 +1,29 @@
+<div class="row-fluid">
+    <div class="span3">
+      <div class="side-head">
+        <h1><%= controller.controller_name.capitalize %></h1>
+      </div>
+      <div class="side-info hidden-phone">
+        <p>In this blog people involved with managing Forthlight writes about things concerning this website, solar power and general updates.</p>
+      </div>
+    </div>
+
+  <div class="span9 blog-content">
+    <% @blogs.each do |blog| %>
+    <div class="blog-post">
+      <h1><%= link_to blog.title, blog_path(blog.id) %></h1>
+      <i>Published on <%= blog.created_at.strftime("%d %b. %Y") %></i>
+      
+      <div class="structurise">
+        <%= truncate_to_paragraph(blog.content) %>
+      </div>
+      <div class="blog-foot">
+        <%= link_to "Read more", blog_path(blog.id), :class=>"mock-btn"%>
+      </div>
+    </div>
+    <% end %>
+
+    <%= paginate @blogs, :remote => false %>
+  </div>    
+</div>
+

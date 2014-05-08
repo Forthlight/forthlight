@@ -1,0 +1,26 @@
+<div class="row-fluid">
+  <div class="span9">
+    <div class="side-head">
+      <h1><%= @page.title %></h1>
+      <div class="visible-phone">
+
+      </div>
+    </div>
+    <div class="side-info structurise">
+      <%=raw @page.content %>
+    </div>
+    </div>
+
+<div class="span3">
+  <div class="side-head hidden-phone">
+    <h3>Quick links</h3>
+  </div>
+  <div class="side-info hidden-phone">
+    <ul>
+      <% footer_pages.each do |f_page| %>
+        <li><%= link_to f_page.title, page_path(f_page.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</div>

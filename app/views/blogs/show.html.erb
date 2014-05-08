@@ -1,0 +1,60 @@
+<div class="row-fluid">
+  <div class="span9">
+    <div class="side-head">
+      <h1><%= @blog.title %></h1>
+      <div class="visible-phone">
+        <i>Posted <%= @blog.created_at.strftime("%d %b. %Y") %></i>
+      </div>
+    </div>
+    <div class="blog-showcase structurise">
+      <%=raw @blog.content %>
+      
+      <% if admin_signed_in? || user_signed_in? %>
+        <div class="side-head">
+          <h3>New comment</h3>
+        </div>
+        <%= form_for([@blog, Administration::BlogComment.new], url: administration.blog_blog_comments_path(@blog.id)) do |f| %>
+          <p><%= f.text_area :content, :rows => 10, :class=>"span12" %></p>
+          <p><%= f.submit "Send", :class=>"mock-btn" %></p>
+        <% end %>
+      <% end %>
+      
+      <div class="blog-comments">
+        <div class="side-head">
+          <h3>Comments</h3>
+        </div>
+        <% if @blog.blog_comments.size > 0 %>
+            <% @blog.blog_comments.each do |comment| %>
+              <div class="comment-post">
+                <% if comment.admin %>
+                  <h3 style="color:#FC6E51;">Administrator</h3>
+                <% else %>
+                  <b><%= find_author_name(comment.author) %></b>
+                <% end %>
+
+                <i><%= comment.created_at.strftime("%I:%M %d %b, %Y") %></i>
+
+                <p><%= comment.content %></p>
+              </div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<div class="span3">
+  <div class="side-head hidden-phone">
+    <h3>Published</h3>
+    <i> <%= @blog.created_at.strftime("%d %b. %Y") %></i>
+  </div>
+  <div class="side-info hidden-phone">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+
