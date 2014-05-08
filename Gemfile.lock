@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Forthlight/administration.git
-  revision: ed3f83f104e29687e0cdda35345c0e632274c1b1
+  revision: 4933471a5621dedf23ed76d6eb41ae39e9c24c99
   branch: dev
   specs:
     administration (0.0.1)
@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/article.git
-  revision: 1256fc1a4018d03d6a175347b5e974c7aa02997d
+  revision: e5550c2644789ae2a22e2b5a660c6be443e21339
   branch: dev
   specs:
     article (0.0.1)
@@ -27,7 +27,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/auth.git
-  revision: c1a6ed5cfcf1c1b05a82cc7e4f2ac2a7edf581f4
+  revision: 30e1422aae432cc0ed13a741075df6426b8187a6
   branch: dev
   specs:
     auth (0.0.1)
@@ -37,7 +37,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/common_domain.git
-  revision: 72e4ddca89f993ad9ca59a110dd1a0f8ff0ce1a9
+  revision: 1ae790dea7acecef2714bb250cb33f72c254202d
   branch: dev
   specs:
     common_domain (0.0.1)
@@ -48,7 +48,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/member.git
-  revision: 23ea5ec094db7d95e9dfc431839e48e48a004d69
+  revision: 6a9728c0f10709d33b80ccfac651684d2685d799
   branch: dev
   specs:
     member (0.0.1)

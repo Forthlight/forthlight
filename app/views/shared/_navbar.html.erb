@@ -11,6 +11,10 @@
 							<li><%= link_to "Home", main_app.root_path %></li>
 							<li><%= link_to "Articles", article.publications_path %></li>
 							<li><%= link_to "Blog", main_app.blogs_path %></li>
+
+							<% main_nav_pages.each do |m_page| %>
+				        <li><%= link_to m_page.title, main_app.page_path(m_page.id) %></li>
+				      <% end %>
 							
 							<% if admin_signed_in? %>
 								<%= render :file => "#{Administration::Engine.root}/app/views/shared/_menu.html.erb" %>

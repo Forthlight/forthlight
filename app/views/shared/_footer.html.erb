@@ -1,11 +1,13 @@
 <div class="footer visible-desktop">
-  <div>
+  <div class="watermark">
     <ul>
       <% footer_pages.each do |f_page| %>
         <li><%= link_to f_page.title, main_app.page_path(f_page.id) %></li>
       <% end %>
+      <li><%= link_to "Administration", auth.new_admin_session_path %></li>
     </ul>
   </div>
- <div class="watermark"><p>Copyright © 2014 Tomas Kjellqvist | Released under GNU Affero general public license V3 <a href="https://github.com/Forthlight/forthlight">@Github</a> | Developed by; Alexander Lindgren, Carl Rockman and Johan Damm.</p>
-</div>
+  <div class="watermark">
+    <p>Copyright © 2014 Tomas Kjellqvist | Released under <a href="http://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3</a> <a href="https://github.com/Forthlight/forthlight">@Github</a> | Developed by: Alexander Lindgren, Carl Rockman and Johan Damm.</p>
+  </div>
 </div>
