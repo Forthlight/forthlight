@@ -3,7 +3,7 @@
     <div class="side-head">
       <h1><%= @blog.title %></h1>
       <div class="visible-phone">
-        <i>Posted <%= @blog.created_at.strftime("%d %b. %Y") %></i>
+        <i>Published <%= @blog.created_at.strftime("%d %b. %Y") %></i>
       </div>
     </div>
     <div class="blog-showcase structurise">
@@ -44,12 +44,20 @@
 
 <div class="span3">
   <div class="side-head hidden-phone">
-    <h3>Published</h3>
-    <i> <%= @blog.created_at.strftime("%d %b. %Y") %></i>
+    <h3>Blog</h3>
   </div>
   <div class="side-info hidden-phone">
     <ul>
-      
+      <li>Published <%= @blog.created_at.strftime("%d %b. %Y") %></li>
+    </ul>
+  </div>
+
+  <div class="side-info hidden-phone">
+    <ul>
+      <li><b>Recent blogs</b></li>
+      <% @recent.each do |recent| %>
+        <li><%= link_to recent.title, blogs_path(recent.id) %></li>
+      <% end %>
     </ul>
   </div>
 </div>
