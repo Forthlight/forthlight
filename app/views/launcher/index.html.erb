@@ -55,20 +55,20 @@
 	<div class="row-fluid sub-bar intrests-bar">
 		<div class="span4">
 			<div class="launch-item">
-				<h2><%= link_to "Read", article.publications_path %></h2>
-				<p>Find and read articles about anything related to solar energy applications. Anyone can read and learn about research data, user projects or commercial products.</p>
+				<h2><%= link_to "Find articles", article.publications_path %></h2>
+				<p>Browse and read articles about anything related to solar energy applications. Anyone can read and learn about research data, user projects or commercial products.</p>
 			</div>
 		</div>
 		<div class="span4">
 			<div class="launch-item">
-				<h2><%= link_to "Join", new_registration_path(resource_name) %></h2>
-				<p>Start writing your own articles and share your knowledge with the world. Just do a quick registration and you will be part of the Forthlight family in no time.</p>
+				<h2><%= link_to "Contribute", new_registration_path(resource_name) %></h2>
+				<p>Start writing your own articles and share your knowledge with the world. Just do a quick registration and you will be part of Forthlight in no time.</p>
 			</div>
 		</div>
 		<div class="span4">
 			<div class="launch-item">
-				<h2>Share</h2>
-				<p>All our articles are easy to print and share with other, even if they don't have access to a computer or phone. Our knowledge isn't bound to the screen but to the real world.</p>
+				<h2><%= link_to "Learn more", administration.blogs_path %></h2>
+				<p>Get the latest news about Forthlight and the solar powered world by reading our blog. Remember to keep an eye out for requested topics.</p>
 			</div>
 		</div>
 	</div>
