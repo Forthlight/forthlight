@@ -40,19 +40,4 @@ set :deploy_to, '~/www/stagelight/forthlight'
 #     # password: 'please use keys'
 #   }
 # setting per server overrides global ssh_options
-on roles(:app), in: :sequence, wait: 5 do
-  within "/home/jodg11/www/stagelight/forthlight/current" do
-    # commands in this block execute in the
-    # directory: /opt/sites/example.com
-    as :jodg11  do
-      # commands in this block execute as the "deploy" user.
-        run "pkill -f puma"
-        run "bundle exec puma -e staging -d -b unix:///tmp/stagelight.sock"
-      with rails_env: :staging do
-        # commands in this block execute with the environment
-        # variable RAILS_ENV=production
-        rake   "assets:precompile"
-      end
-    end
-  end
-end
+
