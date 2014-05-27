@@ -48,7 +48,7 @@ GIT
 
 GIT
   remote: git://github.com/Forthlight/member.git
-  revision: dc5d5047f4f6307514f1cd77425b9e66b2701ee4
+  revision: d6a32b8bf4bc2e78c220529532b90f2fcdde3317
   branch: dev
   specs:
     member (0.0.1)
