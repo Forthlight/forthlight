@@ -47,12 +47,8 @@ namespace :deploy do
   desc "Restart application"
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute("pkill -f puma")
-      puts "Server should now have been stopped"
-      within "/home/jodg11/www/stagelight/forthlight/current" do
-        execute("bundle exec puma -e staging -d -b unix:///tmp/stagelight.sock")
-        puts "Server should now have been started"
-      end
+      execute("pkill -f puma && startpuma")
+      puts "Server should now have restarted"
     end
   end
 

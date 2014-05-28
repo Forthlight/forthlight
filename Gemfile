@@ -74,7 +74,6 @@ group :staging, :production do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano3-puma'
   #gem 'capistrano-puma', require: false
   #gem 'capistrano-git'
   #gem 'rvm1-capistrano3', :require => false
